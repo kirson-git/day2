@@ -1,0 +1,12 @@
+apiVersion: local.storage.openshift.io/v1
+kind: LocalVolume
+metadata:
+  name: file
+  namespace: local-storage
+spec:
+  storageClassDevices:
+    - devicePaths:
+        - /dev/vdc
+      fsType: ext4
+      storageClassName: file
+      volumeMode: Filesystem

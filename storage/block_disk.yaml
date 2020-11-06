@@ -1,0 +1,11 @@
+apiVersion: local.storage.openshift.io/v1
+kind: LocalVolume
+metadata:
+  name: block
+  namespace: local-storage
+spec:
+  storageClassDevices:
+    - devicePaths:
+        - /dev/vdb
+      storageClassName: block
+      volumeMode: Block
